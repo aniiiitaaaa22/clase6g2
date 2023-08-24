@@ -125,7 +125,7 @@ def main():
                     medicamento.asignarNombre(nombre_medicamentos)
                     medicamento.asignarDosis(dosis)
                     lista_med.append(medicamento)
-                    nombres_medicamentos_ingresados.append(medicamento)
+                    nombres_medicamentos_ingresados.append(nombre_medicamentos)
 
                 mas= Mascota()
                 mas.asignarNombre(nombre)
