@@ -113,14 +113,19 @@ def main():
                 fecha=input("Ingrese la fecha de ingreso (dia/mes/año): ")
                 nm=int(input("Ingrese cantidad de medicamentos: "))
                 lista_med=[]
+                nombres_medicamentos_ingresados = []
 
                 for i in range(0,nm):
                     nombre_medicamentos = input("Ingrese el nombre del medicamento: ")
+                    while nombre_medicamentos in nombres_medicamentos_ingresados:
+                            print("Este medicamento ya ha sido ingresado. Ingrese otro nombre.")
+                            nombre_medicamentos = input("Ingrese un medicamento diferente: ")
                     dosis =int(input("Ingrese la dosis: "))
                     medicamento = Medicamento()
                     medicamento.asignarNombre(nombre_medicamentos)
                     medicamento.asignarDosis(dosis)
                     lista_med.append(medicamento)
+                    nombres_medicamentos_ingresados.append(medicamento)
 
                 mas= Mascota()
                 mas.asignarNombre(nombre)
